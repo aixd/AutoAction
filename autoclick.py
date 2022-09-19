@@ -22,9 +22,9 @@ def scut():
     # 格式是PEP8自动转的
     # 这里是找到输入框,发送要输入的用户名和密码,模拟登陆
     browser.find_element_by_xpath(
-        "//*[@id='un']").send_keys(os.environ['SCUT_USER'])
+        "//*[@id='un']").send_keys(os.environ['NWU_USERNAME'])
     browser.find_element_by_xpath(
-        "//*[@id='pd']").send_keys(os.environ['SCUT_PASSWORD'])
+        "//*[@id='pd']").send_keys(os.environ['NWU_PASSWORD'])
     # 在输入用户名和密码之后,点击登陆按钮
     browser.find_element_by_xpath("//*[@id='index_login_btn']").click()
     time.sleep(50)
@@ -75,6 +75,6 @@ def situyun():
 
 if __name__ == '__main__':
     scut()
-    situyun()
+#     situyun()
     # 脚本运行成功,退出浏览器
     browser.quit()
